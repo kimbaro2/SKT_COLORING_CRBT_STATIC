@@ -1,0 +1,33 @@
+#=======================
+#TABLE CODE     설명                
+#=======================
+SCODC  ESNDINS  선물에러            
+SCODC  ESNDREG  등록에러            
+SCODC  EREGINS  저장에러            
+SCODD  ESNDINS  선물에러            
+SCODD  ESNDREG  등록에러            
+SCODD  EREGINS  저장에러            
+SPTLC  ESVRQRY  가입조회            
+SPTLC  ESNDINS  음원선물            
+SPTLC  ESNDCLR  음원삭제            
+SPTLC  ESNDUNR  음원해지            
+SPTLC  ESNDQRY  음원조회            
+SPTLC  ESYSCHECK 시스템체크            
+SPTLC  ESNDLST  음원이력            
+SPTLC  ESNDCHK  이력확인            
+SPTLD  ESVRQRY  가입인증            
+SPTLD  ESNDIND  음원설정            
+SPTLD  ESNDINS  음원선물            
+SPTLD  ESNDCLR  음원삭제            
+SPTLD  ESNDREG  음원등록            
+SPTLD  ESNDUNR  음원해지            
+SPTLD  ESNDQRY  음원조회            
+SPTLD  EREGINS  음원저장            
+SPTLD  ESNDLST  음원이력            
+SPTLD  ESNDCHK  이력확인            
+SSRVC  ESNDINS  선물에러            
+SSRVC  EREGINS  저장에러            
+SSRVD  ESNDINS  선물에러            
+SSRVD  ESNDREG  등록에러            
+SSRVD  EREGINS  저장에러            
+  

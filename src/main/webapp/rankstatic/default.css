@@ -1,0 +1,55 @@
+body, td, form {
+  color: black;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 9pt;
+  }
+
+ A:link    {text-decoration:none;; color: darkblue}
+ A:visited {text-decoration:none;; color: darkblue}
+ A:active  {color:blue;}
+ A:hover  {color:blue;}
+
+   #boxIframe {
+          position: absolute;
+          left:30; 
+          top: 80; 
+          visibility: hidden;
+   }
+
+textarea.content {
+   font-family: "±¼¸²";
+   font-size: 9pt;
+   color: #666666;
+   border: 1px #c9c9c9 solid;
+   background-image: url(images/textline.gif);
+   line-height: 15pt;
+   scrollbar-face-color: #FFFFFF;
+   scrollbar-shadow-color: #c9c9c9;
+   scrollbar-highlight-color: #c9c9c9;
+   scrollbar-3dlight-color: #FFFFFF;
+   scrollbar-darkshadow-color: #FFFFFF;
+   scrollbar-track-color: #FFFFFF;
+   scrollbar-arrow-color: #666666;
+}
+
+<DIV ID="boxIframe">
+<fieldset style="border-width: 0em">
+
+<IFRAME SRC="notice.htm" NAME="textframe" SCROLLING="auto" WIDTH="300" HEIGHT="150" MARGINWIDTH=3 MARGINHEIGHT=0 FRAMEBORDER=0></IFRAME></fieldset>
+
+</div>
+
+<STYLE><!--.userData { BEHAVIOR: url(#default#userdata)	} --></STYLE>
+<STYLE TYPE="text/css">
+<!--
+.bu { font-size:9pt}
+A:link			{ color:darkblue; TEXT-DECORATION: none; }
+A:visited			{ color:black; TEXT-DECORATION: none; }
+ A:hover			{ color:tomato; TEXT-DECORATION: underline; }
+ A.footer:link			{ color:white; TEXT-DECORATION: none; }
+A.footer:visited			{ color:white; TEXT-DECORATION: none; }
+ A.footer:hover			{ color:yellow; TEXT-DECORATION: underline; }
+.unnamed1 {  font-family: "±¼¸²"; font-size: 9pt; text-decoration: none}
+.blurb {FONT-SIZE: 9pt; line-height: 140%; FONT-FAMILY: ±¼¸², Verdana}
+-->
+</STYLE>

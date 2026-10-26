@@ -1,0 +1,119 @@
+A:link {
+	COLOR: #444444; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #444444; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #455FB0; TEXT-DECORATION: none; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #455FB0; TEXT-DECORATION: none
+}
+TD {
+	 FONT-SIZE: 9pt; LINE-HEIGHT: 17px; color: #333333;
+}
+
+SCROLLBAR {
+	SCROLLBAR-FACE-COLOR: #FFDFC6; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #FFDFC6; SCROLLBAR-3DLIGHT-COLOR: #FFDFC6; SCROLLBAR-ARROW-COLOR: #FFDFC6; SCROLLBAR-TRACK-COLOR: #ffffff; SCROLLBAR-DARKSHADOW-COLOR: #ffffff
+}
+
+.tdColor {
+	FONT-SIZE: 9pt;
+	FONT-FAMILY: "";
+	BACKGROUND-COLOR: #E8E8E8;
+	color: #333333;
+	font-weight: bold;
+
+
+}
+
+.form1 {
+	FONT-SIZE: 9pt;
+	FONT-FAMILY: "";
+	font-weight: bold;
+	color: 96175C;
+
+}
+
+.input {
+	FONT-SIZE: 9pt;
+	font-family: "";
+	background-color: FFD1D1;
+	font-weight: bold;
+	color: #aa1919;
+}
+
+A.input:link { FONT-SIZE: 9pt; COLOR: #EA4F4F; FONT-FAMILY: "", "u", "Arial"; } 
+A.input:visited { FONT-SIZE: 9pt; COLOR: #B11818; FONT-FAMILY: "", "u", "Arial"; TEXT-DECORATION: none TEXT-DECORATION: none} 
+A.input:active { FONT-SIZE: 9pt; COLOR: #B11818; FONT-FAMILY: "", "u", "Arial"; TEXT-DECORATION: none } 
+A.input:hover 
+{ FONT-SIZE: 9pt; COLOR: #E37676; FONT-FAMILY: "", "u", "Arial"; TEXT-DECORATION: underline } 
+
+.text1 {
+	FONT-SIZE: 9pt; COLOR: #333333; LINE-HEIGHT: 16px; FONT-FAMILY: ,,Seoul,arial,helvetica
+}
+.text2 {
+	FONT-SIZE: 7pt; FONT-FAMILY: tahoma
+}
+BODY {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 15px
+}
+.inputtext {
+	BORDER-RIGHT: #6c6c6c 1px solid; BORDER-TOP: #6c6c6c 1px solid; FONT: 9pt ; BORDER-LEFT: #6c6c6c 1px solid; COLOR: #333333; BORDER-BOTTOM: #6c6c6c 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.edittext {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; FONT: 9pt ""; BORDER-LEFT: #ffffff 1px solid; COLOR: #333333; BORDER-BOTTOM: #ffffff 1px solid; BACKGROUND-COLOR: #f8f8f8
+}
+.ibox {
+	BORDER-RIGHT: #333333 1px solid; BORDER-TOP: #333333 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #333333 1px solid; BORDER-BOTTOM: #333333 1px solid; FONT-FAMILY: 
+}
+.select {
+	FONT-SIZE: 9pt; WIDTH: 200px; COLOR: #333333; FONT-FAMILY: ""; BACKGROUND-COLOR: #f8f8f8
+}
+.tbox {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: white
+}
+.content {
+	FONT-SIZE: 9pt;
+	COLOR: A73618;
+	FONT-FAMILY: "", "Seoul", "arial", "helvetica";
+	font-weight: bold;
+}
+.content1 {
+	FONT-SIZE: 9pt;
+	COLOR: 3C762A;
+	FONT-FAMILY: "", "Seoul", "arial", "helvetica";
+	font-weight: bold;
+}
+
+.content2 {
+	FONT-SIZE: 9pt;
+	COLOR: 8B2981;
+	FONT-FAMILY: "", "Seoul", "arial", "helvetica";
+	font-weight: bold;
+}
+
+.texttitle {
+	FONT-SIZE: 9pt;
+	COLOR: 9E4228;
+	FONT-FAMILY: "", "Seoul", "arial", "helvetica";
+	font-weight: bold;
+	word-spacing: normal;
+
+}
+
+.graytxt {
+	FONT-SIZE: 20pt;
+	COLOR: #666666;
+	FONT-STYLE: normal;
+	FONT-FAMILY: "Arial", "Helvetica", "sans-serif" ;
+	BACKGROUND-COLOR: #e4e4e4;
+	border: none;
+	text-decoration: underline;
+	font-weight: bold;
+	line-height: 16px;
+
+
+} 
+TD.Title1 		{height:20 ; background-color:FFE6E6; text-align: center ; font-family: "", ""; font-size: 9pt; color: BD1F1F; font-weight: bold}

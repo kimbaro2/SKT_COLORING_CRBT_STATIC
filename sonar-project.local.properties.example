@@ -1,0 +1,2 @@
+# Copy to sonar-project.local.properties (gitignored)
+sonar.token=your-sonar-token

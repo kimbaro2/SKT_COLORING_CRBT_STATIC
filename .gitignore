@@ -1,0 +1,10 @@
+target/
+sonar-project.local.properties
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.mvn/*
+!.mvn/maven.config
+!.mvn/wrapper/

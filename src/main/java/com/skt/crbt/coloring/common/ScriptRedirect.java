@@ -47,9 +47,8 @@ public final class ScriptRedirect {
         out.print("<meta http-equiv=\"Expires\" content=\"0\"></head><body>");
         out.print("<script language=\"JavaScript\">");
         out.print("var w=window.top||window;");
-        out.print("if(w.history&&w.history.pushState){");
-        out.print("for(var i=0;i<30;i++){try{w.history.pushState(null,'','/');}catch(e){break;}}}");
-        out.print("w.location.replace('/');");
+        out.print("try{w.close();}catch(e){}");
+        out.print("if(!w.closed){w.location.replace('/');}");
         out.print("</script></body></html>");
         out.flush();
     }

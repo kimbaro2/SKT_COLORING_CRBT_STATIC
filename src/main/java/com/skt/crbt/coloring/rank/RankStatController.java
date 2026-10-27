@@ -101,7 +101,7 @@ public class RankStatController {
             if (num(row, 1) == 0) {
                 n--;
             }
-            rank.put(str(row, 0), Integer.valueOf(n));
+            rank.put(CpInfoLoader.cpIdKey(row.get(0)), Integer.valueOf(n));
         }
         List<List<Object>> dataRows = queryService.query(NS + (modern ? "selectData" : "selectDataT"), param);
         List<List<Object>> totalRows = queryService.query(NS + (modern ? "selectTotal" : "selectTotalT"), param);
@@ -149,8 +149,8 @@ public class RankStatController {
         int line = 1;
         for (List<Object> row : dataRows) {
             html.append("<tr bgcolor='").append(line % 2 == 1 ? "#fbfbfb" : "#f5f5f5").append("'>");
-            String cpid = str(row, 0);
-            String name = cpName.containsKey(cpid) ? cpName.get(cpid) : cpid;
+            String cpid = CpInfoLoader.cpIdKey(row.get(0));
+            String name = cpInfoLoader.resolveName(cpName, cpid);
             html.append("<td align=right height='20' bgcolor='#eeeeee'>").append(esc(name)).append("</td>");
             html.append("<td align=center height='20' bgcolor='#eeeeee'>");
             html.append(rank.containsKey(cpid) ? rank.get(cpid) : "").append("</td>");
@@ -240,6 +240,7 @@ public class RankStatController {
         List<List<Object>> giftSumRows = queryService.query(sumId, param(RankSqlFragments.TABLE_GIFT, sdate, edate, cpFilter, null));
         List<Object> regiSum = regiSumRows.isEmpty() ? null : regiSumRows.get(0);
         List<Object> giftSum = giftSumRows.isEmpty() ? null : giftSumRows.get(0);
+        Map<String, String> cpName = cpInfoLoader.load();
         boolean excel = "excel".equals(load);
         int border = excel ? 1 : 0;
         String[] heads = channel
@@ -298,7 +299,7 @@ public class RankStatController {
         for (String cpid : cpids) {
             List<Object> regiRow = regiByCp.get(cpid);
             List<Object> giftRow = giftByCp.get(cpid);
-            String name = regiRow != null ? str(regiRow, 0) : str(giftRow, 0);
+            String name = cpInfoLoader.resolveName(cpName, cpid);
             html.append("<tr bgcolor='").append(line % 2 == 1 ? "#fbfbfb" : "#f5f5f5").append("'>");
             html.append("<td align=right height='20'>").append(esc(name)).append("</td>");
             for (int j = 1; j < fields; j++) {
@@ -354,7 +355,7 @@ public class RankStatController {
             if (num(row, 1) == 0) {
                 n--;
             }
-            rank.put(str(row, 0), Integer.valueOf(n));
+            rank.put(CpInfoLoader.cpIdKey(row.get(0)), Integer.valueOf(n));
         }
         double[] totals = new double[6];
         if (!totalRows.isEmpty() && totalRows.get(0).size() >= 6) {
@@ -411,8 +412,8 @@ public class RankStatController {
                 continue;
             }
             html.append("<tr bgcolor='").append(line % 2 == 1 ? "#fbfbfb" : "#f5f5f5").append("'>");
-            String cpid = str(row, 0);
-            String name = cpName.containsKey(cpid) ? cpName.get(cpid) : cpid;
+            String cpid = CpInfoLoader.cpIdKey(row.get(0));
+            String name = cpInfoLoader.resolveName(cpName, cpid);
             html.append("<td align=right height='20' bgcolor='#eeeeee'>").append(esc(name)).append("</td>");
             html.append("<td align=center height='20' bgcolor='#eeeeee'>");
             html.append(rank.containsKey(cpid) ? rank.get(cpid) : "").append("</td>");
@@ -618,7 +619,7 @@ public class RankStatController {
     }
 
     private void pageHead(StringBuilder html, String action) {
-        html.append("<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=ks_c_5601-1987\">");
+        html.append("<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=euc-kr\">");
         html.append("<title>CRBT ").append(STAT).append("</title></head>");
         html.append("<link rel=\"StyleSheet\" type=\"text/css\" href=\"default.css\">");
         html.append(HtmlWriter.INLINE_STYLE);
@@ -702,7 +703,7 @@ public class RankStatController {
             if (row.size() <= keyIndex) {
                 continue;
             }
-            indexed.put(str(row, keyIndex), row);
+            indexed.put(CpInfoLoader.cpIdKey(row.get(keyIndex)), row);
         }
         return indexed;
     }

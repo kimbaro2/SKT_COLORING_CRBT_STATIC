@@ -271,44 +271,44 @@ public class HomeController {
 
                 <section>
                     <div class="grid">
-                        <a class="card" href="/cp_static/index.html">
+                        <a class="card" href="/cp_static/index.html"
+                           onclick="return openService(this.href,'coloring_cp');">
                             <div class="card-top">
                                 <div class="service-icon cp">CP</div>
                                 <span class="arrow">&#8599;</span>
                             </div>
                             <h3>CRBT CP 통계</h3>
                             <p>CRBT CP 통계 페이지에 접속합니다.</p>
-                            <span class="path">/cp_static/</span>
                         </a>
 
-                        <a class="card" href="/aspstatic/index.html">
+                        <a class="card" href="/aspstatic/index.html"
+                           onclick="return openService(this.href,'coloring_asp');">
                             <div class="card-top">
                                 <div class="service-icon asp">ASP</div>
                                 <span class="arrow">&#8599;</span>
                             </div>
                             <h3>컬러링 통계</h3>
                             <p>컬러링 통계 페이지에 접속합니다.</p>
-                            <span class="path">/aspstatic/</span>
                         </a>
 
-                        <a class="card" href="/rankstatic/index.html">
+                        <a class="card" href="/rankstatic/index.html"
+                           onclick="return openService(this.href,'coloring_rank');">
                             <div class="card-top">
                                 <div class="service-icon rank">RK</div>
                                 <span class="arrow">&#8599;</span>
                             </div>
                             <h3>CRBT 통계 v2</h3>
                             <p>CRBT 통계 페이지에 접속합니다</p>
-                            <span class="path">/rankstatic/</span>
                         </a>
 
-                        <a class="card" href="/static/giftgw/giftstatic/index.html">
+                        <a class="card" href="/static/giftgw/giftstatic/index.html"
+                           onclick="return openService(this.href,'coloring_gift');">
                             <div class="card-top">
                                 <div class="service-icon gift">GF</div>
                                 <span class="arrow">&#8599;</span>
                             </div>
                             <h3>선물 통계</h3>
                             <p>선물 통계 페이지에 접속합니다.</p>
-                            <span class="path">/static/giftgw/giftstatic/</span>
                         </a>
                     </div>
                 </section>
@@ -317,6 +317,28 @@ public class HomeController {
                     컬러링 통계<!--GIT_FOOTER-->
                 </footer>
             </main>
+            <script>
+                window.coloringServiceWindows = window.coloringServiceWindows || {};
+                function openService(url, winName) {
+                    var existing = window.coloringServiceWindows[winName];
+                    if (existing && !existing.closed) {
+                        existing.focus();
+                        return false;
+                    }
+                    var w = Math.round(screen.width * 0.6);
+                    var h = Math.round(screen.height * 0.6);
+                    var l = Math.round((screen.width - w) / 2);
+                    var t = Math.round((screen.height - h) / 2);
+                    var features = 'width=' + w + ',height=' + h + ',left=' + l + ',top=' + t
+                            + ',resizable=yes,scrollbars=yes';
+                    var win = window.open(url, winName, features);
+                    if (win) {
+                        window.coloringServiceWindows[winName] = win;
+                        win.focus();
+                    }
+                    return false;
+                }
+            </script>
         </body>
         </html>
         """.replace("<!--GIT_FOOTER-->", gitFooterBlock);

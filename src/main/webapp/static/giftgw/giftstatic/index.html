@@ -17,9 +17,10 @@ function goAuth() {
 		return false;
 	}
 	
-	document.login.action='login';
+	document.login.action='/static/giftgw/giftstatic/login';
 	document.login.method='POST';
 	document.login.submit();
+	return false;
 
 }
 
@@ -57,7 +58,7 @@ PASSWORD
 </td></tr>
 <tr><td colspan=2 align=center>
 <br><br>
-<input type=submit value="로그인" onClick="goAuth();">
+<input type=submit value="로그인" onClick="return goAuth();">
 &nbsp&nbsp&nbsp
 <input type=reset value="취소">
 </td></tr>

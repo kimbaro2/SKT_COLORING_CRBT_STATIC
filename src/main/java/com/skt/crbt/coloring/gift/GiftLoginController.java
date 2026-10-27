@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.skt.crbt.coloring.common.CookieNames;
 import com.skt.crbt.coloring.common.CookieSupport;
-import com.skt.crbt.coloring.common.DbConstants;
 import com.skt.crbt.coloring.common.HtmlWriter;
+import com.skt.crbt.coloring.common.ScriptRedirect;
 
 @Controller
 public class GiftLoginController {
@@ -33,7 +33,9 @@ public class GiftLoginController {
 
     @PostMapping({
             "/static/giftgw/giftstatic/login",
-            "/static/auth"
+            "/static/giftgw/giftstatic/login.php",
+            "/static/auth",
+            "/static/auth.php"
     })
     public void login(@RequestParam(value = "userid", required = false) String userid,
                       @RequestParam(value = "id", required = false) String id,
@@ -74,9 +76,7 @@ public class GiftLoginController {
         }
 
         CookieSupport.add(response, CookieNames.GIFT_ID, userid, CookieNames.PATH_GIFT);
-        HtmlWriter.write(response,
-                "<html><head><meta http-equiv=\"Refresh\" content=\"0.001;url=http://"
-                        + DbConstants.GIFT_DOMAIN + "/master/main.html\"></head></html>");
+        ScriptRedirect.submitTop(response, "/static/admin_main.html");
     }
 
     private String escapeJs(String value) {

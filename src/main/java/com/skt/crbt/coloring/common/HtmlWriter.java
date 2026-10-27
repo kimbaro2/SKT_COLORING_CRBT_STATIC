@@ -37,6 +37,7 @@ public final class HtmlWriter {
 
     private static void write(HttpServletResponse response, String html, String contentType, String disposition)
             throws IOException {
+        response.setCharacterEncoding("EUC-KR");
         response.setContentType(contentType);
         if (disposition != null) {
             response.setHeader("Content-Disposition", disposition);
